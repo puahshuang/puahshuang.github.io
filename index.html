@@ -158,6 +158,37 @@
         });
     </script>
 
+
+    <script>
+    // Mobile touch overlay effect
+    document.addEventListener('DOMContentLoaded', function() {
+        const container = document.querySelector('.image-container');
+        const overlay = document.querySelector('.image-overlay');
+        
+        if (container && overlay) {
+            // For touch devices
+            container.addEventListener('touchstart', function(e) {
+                // Don't prevent default - let scrolling work normally
+                overlay.style.opacity = '1';
+            });
+            
+            container.addEventListener('touchend', function() {
+                // Hide overlay after 1.5 seconds
+                setTimeout(() => {
+                    overlay.style.opacity = '0';
+                }, 1500);
+            });
+            
+            // For when touch is cancelled (like when scrolling)
+            container.addEventListener('touchcancel', function() {
+                setTimeout(() => {
+                    overlay.style.opacity = '0';
+                }, 1500);
+            });
+        }
+    });
+    </script>
+
 </body>
 
 
