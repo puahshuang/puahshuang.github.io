@@ -68,6 +68,24 @@
     margin-bottom: 5px;
     }
 
+    /* For mobile scrolling */
+    @media (pointer: coarse) {
+        /* Show overlay when finger touches image area during scroll */
+        .image-container:hover .image-overlay {
+        opacity: 1;
+        }
+    
+        /* Alternative: Show on any touch interaction */
+        .image-container {
+        -webkit-tap-highlight-color: transparent;
+        }
+    
+        /* Trigger overlay on touch start (including scroll touches) */
+        .image-container:active .image-overlay {
+        opacity: 1;
+        }
+    }
+
     </style>
 </head>
 
