@@ -27,6 +27,47 @@
     font-size: 1.7rem; 
     }    
 
+
+   
+    .image-container {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    transition: transform 0.7s ease;
+    }
+
+    .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    }
+
+    .image-container:hover {
+    transform: translateY(-10px);
+    }
+
+    .image-container:hover .image-overlay {
+    opacity: 1;
+    }
+  
+    .overlay-text h4 {
+    margin-bottom: 10px;
+    }
+
+    .overlay-text p {
+    margin-bottom: 5px;
+    }
+
     </style>
 </head>
 
@@ -62,6 +103,26 @@
         <h1 class="mb-0">
             hi i'm shu ang and i'm </h1>
         <p class="mt-0"><span id="type-writer-introduction"></span></p>
+    </div>
+
+    <!-- Projects section -->
+    <div class="container mt-5" style="padding-top: 75px;">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <a href="#" class="text-decoration-none">
+                <div class="image-container">
+                    <img src="jumping-game-screenshot1.jpg" class="img-fluid project-image" alt="Jumping Game Screenshot">
+                    <div class="image-overlay">
+                        <div class="overlay-text">
+                            <h4>My first game project</h4>
+                            <p>A simple jumping platformer where you avoid falling off screen</p>
+                            <p>A work in progress, still learning and experimenting</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
     </div>
 
     <!-- typewriter script -->
